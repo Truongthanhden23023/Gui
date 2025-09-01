@@ -9,5 +9,5 @@ local side = tab:CreateSection({Title = "Section Left ?",Side = "l"})
 side:CreateButton({Title = "TP",callback = function()
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7182.99854, 227.056198, -2224.60986, 0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, 0.707134247)
   
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6939.67627, 66.4407272, -2259.38184, 0.382687271, -0, -0.923877954, 0, 1, -0, 0.923877954, 0, 0.382687271)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7134.76758, 101.651306, -2250.11841, 0.923881531, 0, 0.382678568, 0, 1, 0, -0.382678568, 0, 0.923881531)
 end,})
