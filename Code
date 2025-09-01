@@ -1,0 +1,24 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SixZensED/Backups/refs/heads/main/Xelora%20Lib%202.lua"))()
+
+local main = library:CreateWindow({Title = "Xelora Hub",Icon = 127435222710292})
+
+local tab = main:CreateTab({Title = "Tabs ???"})
+
+local side = tab:CreateSection({Title = "Section Left ?",Side = "l"})
+
+side:CreateButton({Title = "Button ???",callback = function()
+    local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- 🔹 Đường dẫn đến object bạn muốn TP tới
+local obj = workspace.LocalSpawnedObjects:FindFirstChild("7b9f1b32-5d5f-4d80-b258-7eb95c05965f")
+
+if obj and obj:FindFirstChild("sugar") then
+    local sugarPart = obj.sugar
+    local char = player.Character or player.CharacterAdded:Wait()
+    local hrp = char:WaitForChild("HumanoidRootPart")
+    hrp.CFrame = sugarPart.CFrame + Vector3.new(0, 5, 0) -- TP lên cao 5 để không kẹt
+else
+    warn("Không tìm thấy sugar trong LocalSpawnedObjects!")
+end
+end,})
